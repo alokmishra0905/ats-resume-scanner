@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATS Resume Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 ATS Resume Scanner</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="resume">Upload Resume (.pdf or .docx)</label>
+            <input type="file" name="resume" accept=".pdf,.docx" required>
+
+            <label for="job_description">Paste Job Description</label>
+            <textarea name="job_description" placeholder="Enter job requirements here..." required></textarea>
+
+            <button type="submit">Scan Resume</button>
+        </form>
+    </div>
+</body>
+</html>

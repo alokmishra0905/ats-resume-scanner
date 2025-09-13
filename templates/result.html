@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATS Scan Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>✅ ATS Scan Result</h1>
+        <div class="result-box">
+            <p><strong>Email:</strong> {{ data.email }}</p>
+            <p><strong>Skills Found:</strong> {{ data.skills }}</p>
+            <p><strong>ATS Score:</strong> {{ ats_score }}%</p>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <a href="/">🔁 Try Another Scan</a>
+        </div>
+    </div>
+</body>
+</html>
